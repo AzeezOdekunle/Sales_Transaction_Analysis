@@ -1,88 +1,54 @@
- create table Return_Items
-	(id int Primary Key,
-	 Order_ID int,
-	 Sales_id int,
-	 Order_status varchar (30) 
-	);
-	select * from Return_items
-	
---load data using copy command into return_items
-copy return_items 
-from 'C:\Program Files\PostgreSQL\Returned_Item.csv' delimiter ',' csv header
+1. The Organization is planning to give the best performing manager who made the best sales and want to know the region which the manager belongs to ?
+   
 
-
-create table Regional_manager
-	(Region_name varchar (30) PRIMARY KEY ,
-	 Manager varchar (30)
-	);
---load data using copy command
-copy Regional_manager 
-from 'C:\Program Files\PostgreSQL\Transaction Analysis\Regional_Manager.csv' delimiter ',' csv header 
-select * from Regional_manager
-
-create table Sales
-(sales_id int Primary Key,
- Order_id int,
- Real_order_date date,
- Order_Priority varchar (30),
- Order_Quantity int,
- Sales decimal,
- Discount decimal,
- Ship_Mode varchar (30),
- Profit decimal,
- Unit_price decimal,
- Shipping_Cost decimal,
- First_Name varchar (30),
- Last_Name varchar (30),
- Region varchar (30),
- Customer_Segment varchar (30) ,
- Product_Category varchar (30),
- Product_SubCategory varchar (30),
- Product_Container varchar (30),
- Ship_Date date, 
- Birth_Date date
-);
-
-select * from Sales
-
---load data into sales using copy command
-copy Sales
-from 'C:\Program Files\PostgreSQL\Transaction Analysis\Sales_Transaction.csv' delimiter ',' csv header
-select * from Sales 
-
---Que 1: The Organization is planning to give the best performing manager who made the best sales and 
---want to know the region which the manager belongs to?
-
-select r.manager, r.region_name, sum(s.sales) as total_sales
-from sales s join regional_manager r 
+SELECT r.manager, r.region_name, SUM(s.sales) AS total_sales
+FROM sales s INNER JOIN regional_manager r 
 on s.region= r.region_name
-group by 1,2
-order by 3 Desc
-limit 1;
---**The best performing manager who made the best sales is PAT and is from WEST 
+GROUP BY 1,2
+ORDER BY 3 DESC
+LIMIT 1;
+
+## Output 
+The best performing manager who made the best sales is PAT and is from WEST 
 
 
---Que 2: How many times was delivery truck used as the ship mode?
-select count(ship_mode) ship_mode_count, ship_mode
-from sales
-group by 2
-having ship_mode = 'Delivery Truck'
-order by 1;
---**Delivery truck was used 1146 times as the ship mode
+![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/0f3fe8b9-805c-4d68-8b63-166d68a76570) 
 
 
 
---Que 3: How many orders were returned and which product category got rejected the most?
+2. How many times was delivery truck used as the ship mode?
 
-Select r.order_status, count(r.order_status) order_status_count, s.product_category
-from return_items r
-inner join sales s
-On r.sales_id = s.sales_id
-group by 1,3
-having r.order_status = 'Returned' 
-order by 2 desc,3 
---**The number of orders returned are 461 (Office supplies), 218(Technology) and 193 (Furniture)**
---and Office supplies got rejected most.
+SELECT 
+COUNT(ship_mode) AS ship_mode_count, 
+ship_mode
+FROM sales
+GROUP BY 2
+HAVING ship_mode = 'Delivery Truck'
+ORDER BY 1;
+
+## Output
+
+![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/9e7bdbb0-1982-4d4c-9ea5-5ad8eec9c003)
+
+Delivery truck was used 1146 times as the ship mode
+
+
+
+3. ### How many orders were returned and which product category got rejected the most?
+
+SELECT r.order_status, COUNT(r.order_status) order_status_count, s.product_category
+FROM return_items r
+INNER JOIN sales s
+ON r.sales_id = s.sales_id
+GROUP BY 1,3
+HAVING r.order_status = 'Returned' 
+ORDER BY 2, 3 DESC;
+
+## Output
+
+![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/733ff11b-4f56-49c9-b6ac-c14f1181a6f1)
+
+The number of orders returned are 461 (Office supplies), 218(Technology) and 193 (Furniture) and Office supplies got rejected most.
 	 
 -- Que 4: Which Year did the company incurred the least shipping cost
 
