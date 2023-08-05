@@ -29,7 +29,7 @@ Table 3: Regional_managers
 # Case Study Solution
 - [This can be found here](SalesTransaction.md)
 
-# Conclusion and Reccomendation
+# Conclusion and Recommendation
 1. The company should discontinue low income product and find a replacement of similar product category.
 2. The management is advised to conduct a survey from their customers and make a proper adjustment to avoid the return of more items.
 3. The company should make their products available, and possibly in stock (especially on Sundays) as many customers would like to shop more on weekends.
