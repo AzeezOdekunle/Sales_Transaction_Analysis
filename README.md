@@ -11,9 +11,9 @@ A fictional organization provided some data to familiarize with, and was asked t
 
 #  Available Data
 The following are the snippet of the tables used for the analysis:
-Table 1: 
-Table 2:
-Table 3:
+Table 1: Sales
+Table 2: Order_Status
+Table 3: Regional_managers
 
 ![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/661ec0d2-815c-4258-874d-8a059cbb39f5)
 ![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/054cc050-553e-40ba-8c0a-aca83e831430)
@@ -30,4 +30,6 @@ Table 3:
 - [This can be found here](SalesTransaction.md)
 
 # Conclusion and Reccomendation
-
+1. The company should discontinue low income product and find a replacement of similar product category.
+2. The management is advised to conduct a survey from their customers and make a proper adjustment to avoid the return of more items.
+3. The company should make their products available, and possibly in stock (especially on Sundays) as many customers would like to shop more on weekends.
