@@ -24,4 +24,4 @@ You can find the link here
 - Data Problems Solving Technique
 
 # Case Study Solution
-- [This can be found here]()
+- [This can be found here](SalesTransaction.md)
