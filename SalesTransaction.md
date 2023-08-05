@@ -1,3 +1,5 @@
+#  ___A CASE STUDY PROBLEMS___
+
 1. #### The Organization is planning to give the best performing manager who made the best sales and want to know the region which the manager belongs to ?
 
 SELECT r.manager, r.region_name, SUM(s.sales) AS total_sales
