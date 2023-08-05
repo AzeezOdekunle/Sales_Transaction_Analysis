@@ -10,7 +10,10 @@ A fictional organization provided some data to familiarize with, and was asked t
 ![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/63bf2826-7051-4bd9-8164-6f6629680c34)
 
 #  Available Data
-You can find the link here
+The following are the snippet of the tables used for the analysis:
+Table 1: 
+Table 2:
+Table 3:
 
 ![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/661ec0d2-815c-4258-874d-8a059cbb39f5)
 ![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/054cc050-553e-40ba-8c0a-aca83e831430)
