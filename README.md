@@ -1,7 +1,7 @@
 ![image](https://github.com/AzeezOdekunle/Sales_Transaction_Analysis/assets/139698365/33846a73-86fd-4864-b36b-6d3583501e59)
 
 # Introduction
-Sales transaction analysis is an important aspect in businesses to gain a keen understanding of their customers, sales performance, and business operations. By analyzing sales data, businesses can make informed decisions, optimize their sales strategies, and ultimately increase their bottom line.
+Sales transaction analysis is an important aspect in businesses, where organization tends to gain a keen understanding of their customers, sales performance, and business operations. By analyzing sales data, businesses can make informed decisions, optimize their sales strategies, and ultimately increase their bottom line.
 
 # Problem Statement
 A fictional organization provided some data to familiarize with, and was asked to derive insights on their current operations, needed answers to their problems for them to be properly guided and manage their resources.
@@ -25,3 +25,6 @@ You can find the link here
 
 # Case Study Solution
 - [This can be found here](SalesTransaction.md)
+
+# Conclusion and Reccomendation
+
